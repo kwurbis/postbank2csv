@@ -1,0 +1,86 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 22cde5585339d7cf82d539ef540221f3ec6aa68c4a75c30126d8a1ed3e02072e
+
+name:           postbank2csv
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/maxdiefenbach/postbank2csv#readme>
+homepage:       https://github.com/maxdiefenbach/postbank2csv#readme
+bug-reports:    https://github.com/maxdiefenbach/postbank2csv/issues
+author:         Maximilian N. Diefenbach
+maintainer:     maxdiefenbach@protonmail.com
+copyright:      Copyright (c) 2020 Maximilian N. Diefenbach
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/maxdiefenbach/postbank2csv
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_postbank2csv
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , cassava
+    , directory
+    , filepath
+    , megaparsec
+    , process
+    , text
+    , time
+  default-language: Haskell2010
+
+executable postbank2csv
+  main-is: Main.hs
+  other-modules:
+      Paths_postbank2csv
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , cassava
+    , directory
+    , filepath
+    , megaparsec
+    , postbank2csv
+    , process
+    , text
+    , time
+  default-language: Haskell2010
+
+test-suite postbank2csv-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_postbank2csv
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , cassava
+    , directory
+    , filepath
+    , megaparsec
+    , postbank2csv
+    , process
+    , text
+    , time
+  default-language: Haskell2010
