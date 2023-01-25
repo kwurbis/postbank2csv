@@ -17,11 +17,13 @@ Creates a file named after the date range of the statement (example "20200204_20
 ```
 $ stack build
 ```
-- install pdftotext using brew, which seems to be containd in the package poppler
+- install pdftotext using brew, which seems to be contained in the package poppler
 
 ```
 $ brew install poppler
 ```
+
+- make the pdf2latex executable using chmod
 
 
 
