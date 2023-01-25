@@ -23,7 +23,7 @@ $ stack build
 $ brew install poppler
 ```
 
-- make the pdf2latex executable using chmod
+- make pdf2latex executable using chmod
 
 
 
